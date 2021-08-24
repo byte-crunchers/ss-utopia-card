@@ -19,6 +19,7 @@ public class CardTypeController {
     public static final String MAPPING = EndpointConstants.API_V_0_1_CARDTYPES;
     private final CardTypeService cardTypeService;
 
+    //create card type
     @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<CardType> createNewCardType(@Valid @RequestBody CardTypeDto cardTypeDto){
         var cardType = cardTypeService.createNewCardType(cardTypeDto);
@@ -26,6 +27,7 @@ public class CardTypeController {
         return ResponseEntity.created(uri).body(cardType);
     }
 
+    //get card type
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<CardType>> getAllCardTypes(){
         List<CardType> CardType = cardTypeService.getAllCardTypes();

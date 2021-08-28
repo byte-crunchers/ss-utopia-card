@@ -4,6 +4,7 @@ import com.ssutopia.finacial.cardService.controller.EndpointConstants;
 import com.ssutopia.finacial.cardService.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -37,7 +38,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .addFilter(new JwtAuthorizationFilter(authenticationManager(),  this.userRepository))
                 .authorizeRequests()
-                .antMatchers(EndpointConstants.API_V_0_1_CARDTYPES).hasRole("ADMIN")
+                //for Admin role to create card types
+                .antMatchers(HttpMethod.POST,EndpointConstants.API_V_0_1_CARDTYPES).hasRole("ADMIN")
+                //for Admin and user role to view card types
+                .antMatchers(HttpMethod.GET,EndpointConstants.API_V_0_1_CARDTYPES).hasAnyRole("ADMIN","USER")
                 .anyRequest().authenticated();
         ;
     }

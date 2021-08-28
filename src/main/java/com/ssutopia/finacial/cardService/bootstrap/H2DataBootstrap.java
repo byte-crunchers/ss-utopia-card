@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class H2DataBootstrap implements CommandLineRunner {
     private final CardTypeRepository cardTypeRepository;
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();;
+    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     @Override
     public void run(String... args) throws Exception {
         if(cardTypeRepository.count()==0){

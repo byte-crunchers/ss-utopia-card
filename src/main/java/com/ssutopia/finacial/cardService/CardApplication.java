@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Bean;
 public class CardApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(CardApplication.class, args);
     }
 

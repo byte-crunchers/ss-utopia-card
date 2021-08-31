@@ -38,6 +38,7 @@ public class CardTypeServiceImpl implements CardTypeService{
         var cardType = CardType.builder()
                 .cardName(cardTypeDto.getCardName())
                 .apr(cardTypeDto.getApr())
+                .foodiesPointsPercentages(cardTypeDto.getFoodiesPointsPercentages())
                 .annualFee(cardTypeDto.getAnnualFee())
                 .lateFee(cardTypeDto.getLateFee())
                 .cashBack(cardTypeDto.getCashBack())

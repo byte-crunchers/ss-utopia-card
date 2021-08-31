@@ -69,6 +69,7 @@ public class H2DataBootstrap implements CommandLineRunner {
                 .cashBack(0.0f)
                 .lateFee(0)
                 .apr(0.0f)
+                .foodiesPointsPercentages(0.00f)
                 .build();
         cardTypeRepository.save(CardType1);
 
@@ -79,6 +80,7 @@ public class H2DataBootstrap implements CommandLineRunner {
                 .cashBack(0.03f)
                 .lateFee(29)
                 .apr(0.15f)
+                .foodiesPointsPercentages(0.00f)
                 .build();
         cardTypeRepository.save(CardType2);
 
@@ -89,6 +91,7 @@ public class H2DataBootstrap implements CommandLineRunner {
                 .cashBack(0.08f)
                 .lateFee(29)
                 .apr(0.15f)
+                .foodiesPointsPercentages(0.00f)
                 .build();
         cardTypeRepository.save(CardType3);
 
@@ -98,9 +101,21 @@ public class H2DataBootstrap implements CommandLineRunner {
                 .annualFee(0)
                 .cashBack(0.01f)
                 .lateFee(29)
+                .foodiesPointsPercentages(0.00f)
                 .apr(0.0499f)
                 .build();
         cardTypeRepository.save(CardType4);
+
+        var CardType5 = CardType.builder()
+                .id(5L)
+                .cardName("Foodies Credit")
+                .annualFee(0)
+                .cashBack(0.01f)
+                .lateFee(29)
+                .apr(0.0499f)
+                .foodiesPointsPercentages(0.004f)
+                .build();
+        cardTypeRepository.save(CardType5);
     }
 
 }

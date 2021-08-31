@@ -32,6 +32,9 @@ public class CardType {
     private float apr = 0.00f;
 
     @Builder.Default
+    private float foodiesPointsPercentages = 0.0f;
+
+    @Builder.Default
     private float cashBack = 0.00f;
 
     @Builder.Default

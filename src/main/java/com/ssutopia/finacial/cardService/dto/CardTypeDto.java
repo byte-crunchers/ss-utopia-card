@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.NotBlank;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,6 +24,9 @@ public class CardTypeDto {
 
     @Builder.Default
     private float cashBack = 0.00f;
+
+    @Builder.Default
+    private float foodiesPointsPercentages = 0.0f;
 
     @Builder.Default
     private int lateFee = 0;

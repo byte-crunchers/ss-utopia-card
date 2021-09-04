@@ -27,17 +27,20 @@ public class CardTypeServiceImplTest {
     static void beforeAll(){
         card1 = CardType.builder()
                 .id(1L)
+                .cardType("Credit")
                 .cardName("test1")
                 .build();
 
         card2 = CardType.builder()
                 .id(2L)
+                .cardType("Credit")
                 .cardName("test2")
                 .build();
 
 
         card3 = CardType.builder()
                 .id(3L)
+                .cardType("Credit")
                 .cardName("test3")
                 .build();
 
@@ -53,6 +56,7 @@ public class CardTypeServiceImplTest {
         when(repository.save(any(CardType.class))).thenReturn(card1);
         var result = service.createNewCardType(cardTypeDto.builder()
                 .cardName(card1.getCardName())
+                .cardType(card1.getCardType())
                 .build())
                 ;
         assertEquals(card1, result);
@@ -75,6 +79,7 @@ public class CardTypeServiceImplTest {
         assertThrows(DuplicateCardNameException.class,
                 () -> service.createNewCardType(cardTypeDto.builder()
                         .cardName(card1.getCardName())
+                        .cardType(card1.getCardType())
                         .build()));
     }
 

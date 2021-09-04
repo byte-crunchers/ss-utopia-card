@@ -62,6 +62,7 @@ public class CardTypesControllerSecurityTests {
     CardType mockCardType = CardType.builder()
             .id(1L)
             .cardName("test1")
+            .cardType("Credit")
             .build();
 
     User mockAdminUser = User.builder()

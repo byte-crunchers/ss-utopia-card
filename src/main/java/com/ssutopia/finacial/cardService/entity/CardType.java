@@ -25,6 +25,9 @@ public class CardType {
     @NotBlank
     private String cardName;
 
+    @NotBlank
+    private String cardType;
+
     @Builder.Default
     private int annualFee = 0;
 

@@ -1,6 +1,5 @@
 <component name="libraryTable">
-  <library name="Spring Security-5.2.1" type="spring-security">
-    <properties version="5.2.1" />
+  <library name="Spring Security-5.2.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/spring-security-remoting/5.2.1.RELEASE/spring-security-remoting-5.2.1.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-security-openid/5.2.1.RELEASE/spring-security-openid-5.2.1.RELEASE.jar!/" />

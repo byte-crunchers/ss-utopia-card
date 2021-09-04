@@ -64,7 +64,7 @@ public class H2DataBootstrap implements CommandLineRunner {
     private void loadAllCardType(){
         var CardType1 = CardType.builder()
                 .id(1L)
-                .cardName("Lili Debit")
+                .cardName("Utopia Debit")
                 .cardType("Debit")
                 .annualFee(0)
                 .cashBack(0.0f)
@@ -76,7 +76,7 @@ public class H2DataBootstrap implements CommandLineRunner {
 
         var CardType2 = CardType.builder()
                 .id(2L)
-                .cardName("Bear Credit")
+                .cardName("Utopia Credit")
                 .cardType("Credit")
                 .annualFee(0)
                 .cashBack(0.03f)
@@ -88,7 +88,7 @@ public class H2DataBootstrap implements CommandLineRunner {
 
         var CardType3 = CardType.builder()
                 .id(3L)
-                .cardName("Platinum Credit")
+                .cardName("Utopia Platinum Credit")
                 .cardType("Credit")
                 .annualFee(200)
                 .cashBack(0.08f)
@@ -100,7 +100,7 @@ public class H2DataBootstrap implements CommandLineRunner {
 
         var CardType4 = CardType.builder()
                 .id(4L)
-                .cardName("Plus Credit")
+                .cardName("Utopia Plus Credit")
                 .cardType("Credit")
                 .annualFee(0)
                 .cashBack(0.01f)
@@ -112,7 +112,7 @@ public class H2DataBootstrap implements CommandLineRunner {
 
         var CardType5 = CardType.builder()
                 .id(5L)
-                .cardName("Foodies Credit")
+                .cardName("Utopia Foodies Credit")
                 .cardType("Credit")
                 .annualFee(0)
                 .cashBack(0.01f)

@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin
 @RequestMapping(EndpointConstants.API_V_0_1_CARDTYPES)
 public class CardTypeController {
     public static final String MAPPING = EndpointConstants.API_V_0_1_CARDTYPES;

@@ -7,7 +7,7 @@ pipeline {
 
     environment {
       AWS_ACCOUNT_ID="422288715120"
-      AWS_DEFAULT_REGION="us-east-2" 
+      AWS_DEFAULT_REGION="us-east-1" 
       IMAGE_REPO_NAME="ss-utopia-card"
       IMAGE_TAG="latest"
       REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
@@ -17,7 +17,7 @@ pipeline {
 
       stage('checkout') {
         steps {
-          git branch: 'feature_jenkins', credentialsId: 'git_login', url: 'https://github.com/byte-crunchers/ss-utopia-card.git'
+          git branch: 'develop', credentialsId: 'git_login', url: 'https://github.com/byte-crunchers/ss-utopia-card.git'
         }
       }
 
@@ -53,7 +53,7 @@ pipeline {
       stage('Deploy') {
         steps {
           script{
-            docker.withRegistry("https://${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com", 'ecr:us-east-2:ss-AWS') 
+            docker.withRegistry("https://${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com", 'ecr:us-east-1:ss-AWS') 
             {
               docker.image('ss-utopia-card').push('latest')
             }

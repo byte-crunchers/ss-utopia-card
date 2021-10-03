@@ -1,6 +1,10 @@
 # ss-utopia-card
 
-### Cards microservice
+### Deprecation notice
+- Card microservice will no longer be used.
+- Account microservice will now handle all card functions.
+
+#### Cards microservice
 - Backend microservice that handles credit & debit cards.
 - Routes are secured with JWT authorization & HTTPS.
 - Routes are accessed through Spring cloud gateway & Eureka server.

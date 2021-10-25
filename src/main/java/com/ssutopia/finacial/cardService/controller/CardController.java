@@ -62,6 +62,12 @@ public class CardController {
 		}
 	}
 
+	
+	@GetMapping(path = "/test", produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String Test(){
+			return "Hi";
+	}
+
 	/*
 	 * 
 	 * 

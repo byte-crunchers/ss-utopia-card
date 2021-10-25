@@ -38,6 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .addFilter(new JwtAuthorizationFilter(authenticationManager(),  this.userRepository))
                 .authorizeRequests()
+                .antMatchers("cards/test").permitAll()
                 //for Admin role to create card types
                 .antMatchers(HttpMethod.POST,EndpointConstants.API_V_0_1_CARDTYPES).hasRole("ADMIN")
                 //for Admin and user role to view card types
